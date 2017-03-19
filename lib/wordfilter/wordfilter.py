@@ -26,7 +26,7 @@ class Wordfilter(object):
 
         else:
             data = resource_string('wordfilter', '../badwords.json').decode('utf-8')
-            self.blacklist = [s.lower() for s in json.loads(data, 'r')]
+            self.blacklist = [s.lower() for s in json.loads(data)]
 
     def blacklisted(self, string):
         string = string.lower()
